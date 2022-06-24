@@ -12,7 +12,8 @@
   <body>
   <section class="section">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title" id="app">
+
         ペットボトルたかし制作
       </h1>
       <p class="subtitle">
@@ -87,12 +88,34 @@
       <input class="input" type="password" placeholder="PET" name="$possword">
         <label class="label">コメント欄</label>
       <textarea name="message" class="textarea" placeholder="コメント"></textarea>
-
   </div>
 
-  <button name="button" input type="submit" class="button is-primary">vip会員登録</button>
-  <button name="button" input type="reset" class="button is-danger">取り消し</button>
+<p><button name="button" input type="submit" class="button is-primary">送信</button>
+  <button name="button" input type="reset" class="button is-danger">取り消し</button></p>
 </form>
-  </body>
+<p class="is-size-2">あなたの情報(予言)</p>
+<table class="table is-striped is-fullwidth">
+          <tbody><tr>
+            <table class="table is-striped is-fullwidth">
+          <tbody><tr>
+            <td>端末情報</td>
+            <td id="device"></td>
+          </tr>
+          <tr>
+            <td>最終閲覧日時</td>
+            <td id="date"></td>
+          </tr>
+        </tbody></table>
+        </tbody></table>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+        <script type="text/javascript">
+          // history.pushState(null, null, location.href);
+          // $(window).on('popstate', function(){
+          //   history.go(1);
+          // });
+          $("#device").text(platform.description);
+          $("#date").text(new Date().toLocaleString("ja-JP"));
+              </script>
+  </body>　　　　　　
 </html>
-
